@@ -1,0 +1,40 @@
+{
+  "name": "blockly-local-variable",
+  "version": "0.0.0",
+  "description": "Add local variable support to Blockly.",
+  "author": "yukiya383",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yukiya383/blockly-plugin-type-blockjson.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yukiya383/blockly-plugin-type-blockjson/issues"
+  },
+  "homepage": "https://yukiya383.github.io/blockly-plugin-type-blockjson/",
+  "scripts": {
+    "doc": "typedoc .",
+    "prepare": "npm run tsc",
+    "prepublishOnly": "npm run tsc",
+    "tsc": "tsc",
+    "type-check": "tsc --noEmit"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "blockly": "^5.20210325.0"
+  },
+  "devDependencies": {
+    "typedoc": "^0.20.34",
+    "typescript": "^4.2.3"
+  },
+  "dependencies": {
+    "blockly-plugin-type-blockjson": "^0.0.3",
+    "constant-case": "^3.0.4",
+    "pascal-case": "^3.1.2",
+    "snake-case": "^3.0.4"
+  }
+}

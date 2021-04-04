@@ -1,0 +1,20 @@
+{
+    "out": "./docs/",
+    "name": "blockly-plugin-type-blockjson",
+    "exclude": [
+        "node_modules/**/*",
+        "dist/**/*",
+        "docs/**/*"
+    ],
+    "externalPattern": [
+        "node_modules/**/*",
+        "dist/**/*",
+        "docs/**/*"
+    ],
+    "excludeExternals": true,
+    "excludeInternal": false,
+    "excludePrivate": true,
+    "hideGenerator": true,
+    "plugin": "none",
+    "readme": "./README.md"
+}

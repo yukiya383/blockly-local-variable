@@ -1,0 +1,3 @@
+[submodule "src/blockly-plugin-typed-codegenerator"]
+	path = src/blockly-plugin-typed-codegenerator
+	url = https://github.com/yukiya383/blockly-plugin-typed-codegenerator
