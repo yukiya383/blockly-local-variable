@@ -1,4 +1,10 @@
 /**
+ * @license
+ * Copyright 2021 yukiya383
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+/**
  * Builder and director which initialize below things:
  * - List
  * - Declaration block, getter/setter block

@@ -1,4 +1,10 @@
 /**
+ * @license
+ * Copyright 2021 yukiya383
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+/**
  * A list which contains declarations.
  * @module
  */
