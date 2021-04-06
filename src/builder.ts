@@ -33,7 +33,7 @@ export interface IDeclarationListBuilder {
    * Add primitives to {@link DeclarationList}.
    * @param list List of primitives.
    */
-  addInitialValues(list:Declaration[]):void;
+  addInitialValues(list:Declaration[]):this;
   /**
    * Initialize declaration block.
    */
@@ -157,7 +157,7 @@ export class DeclarationListBuilder implements IDeclarationListBuilder {
   }
   
   addCategoryDefaultElements(xmlList:Element[]){
-    this.xmlList.push(...xmlList);
+    this.xmlList = this.xmlList.concat(xmlList);
     return this;
   }
 

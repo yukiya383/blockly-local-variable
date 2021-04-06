@@ -34,7 +34,7 @@ export class DeclarationList{
    * @param list List of primitives.
    */
   public addInitialListValues(list:Declaration[]) {
-    this.list.push(...list);
+    this.list = this.list.concat(list);
   }
   
   /**
