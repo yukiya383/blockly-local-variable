@@ -163,6 +163,7 @@ export class DeclarationListBuilder implements IDeclarationListBuilder {
 
   addInitialValues(list:Declaration[]) {
     this.list.addInitialListValues(list);
+    return this;
   }
 
   initGetter_(){
