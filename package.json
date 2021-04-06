@@ -6,23 +6,26 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yukiya383/blockly-plugin-type-blockjson.git"
+    "url": "https://github.com/yukiya383/blockly-local-variable.git"
   },
   "bugs": {
-    "url": "https://github.com/yukiya383/blockly-plugin-type-blockjson/issues"
+    "url": "https://github.com/yukiya383/blockly-local-variable/issues"
   },
-  "homepage": "https://yukiya383.github.io/blockly-plugin-type-blockjson/",
+  "homepage": "https://yukiya383.github.io/blockly-local-variable/",
   "scripts": {
     "doc": "typedoc .",
-    "prepare": "npm run tsc",
-    "prepublishOnly": "npm run tsc",
-    "tsc": "tsc",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build",
+    "build": "npm run build:cjs && npm run build:esm",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:esm": "tsc -p tsconfig.esm.json",
     "type-check": "tsc --noEmit"
   },
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "lib/index.js",
+  "module": "esm/index.js",
+  "types": "lib/index.d.ts",
   "files": [
-    "dist"
+    "lib", "esm", "umd"
   ],
   "peerDependencies": {
     "blockly": "^5.20210325.0"

@@ -7,7 +7,7 @@ import Blockly from 'blockly';
 /**
  * Element type.
  */
-export type ListElemType = {
+export type Declaration = {
   /** ID of corresponding block. */
   id:string;
   /** ID of workspace where corresponding block exists. */
@@ -21,13 +21,13 @@ export type ListElemType = {
  * Typical example is local variable.
  */
 export class DeclarationList{
-  protected list:ListElemType[] = [];
+  protected list:Declaration[] = [];
 
   /**
    * Add primitives.
    * @param list List of primitives.
    */
-  public addInitialListValues(list:ListElemType[]) {
+  public addInitialListValues(list:Declaration[]) {
     this.list.push(...list);
   }
   
@@ -37,8 +37,8 @@ export class DeclarationList{
    * @returns List of elements accessible.
    * @package
    */
-  listGetter(block:Blockly.Block):ListElemType[]{
-    let result:Array<ListElemType> = [];
+  getAccessibleDeclarations(block:Blockly.Block):Declaration[]{
+    let result:Array<Declaration> = [];
     let parent=block.getParent();
     if(parent===null){
       return this.list;

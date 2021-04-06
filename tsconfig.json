@@ -2,12 +2,10 @@
   "compilerOptions": {
     "allowJs": false,
     "alwaysStrict": true,
-    "declaration": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": false,
     "lib": ["dom", "es2017"],
-    "module": "umd",
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": true,
@@ -15,10 +13,8 @@
     "noImplicitThis": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "outDir": "./dist/",
     "skipLibCheck": true,
     "strict": true,
-    "target": "es5"
   },
   "exclude": ["node_modules"],
   "include": ["src/**/*.ts"]

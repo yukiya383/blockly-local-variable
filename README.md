@@ -1,22 +1,21 @@
 ## What's this?
-[Blockly official guide](https://developers.google.com/blockly/guides/create-custom-blocks/define-blocks#json_format_versus_javascript_api) says:
-> The JSON format is the preferred method of defining blocks.
-
-This plugin provides type declaration for below kind of JSON data defined in .ts file:
-- Block definition
+A plugin for managing local declarations.
+Keep in mind that this plugin is independent of Blockly's default variable, and declared variables cannot be accessed by field_variable.
 
 ## Installation
-1. Make sure you've installed typescript.
-2. `npm install blockly-plugin-type-blockjson`.
+```bash
+npm install blockly-local-variable
+```
 
 ## Usage
 ```typescript
-import {BlockJson} from 'blockly-plugin-type-blockJSON';
-
-const sampleBlock:BlockJson = {
-    type:"SampleBlock",...
-}
+import {DeclarationListDirector, DeclarationListBuilder} from 'blockly-local-variable';
+...
+const localVariableListBuilder = new DeclarationListBuilder("LocalVariable");
+const localVariableListDirector = new DeclarationListDirector(localVariableListBuilder);
+localVariableListDirector.construct(workspace);
 ```
+Now, you can use custum category named "LOCAL_VARIABLR".
 
 ## Reference
-https://yukiya383.github.io/blockly-plugin-type-blockjson/
+https://yukiya383.github.io/blockly-local-variable/

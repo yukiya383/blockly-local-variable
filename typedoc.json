@@ -1,14 +1,19 @@
 {
     "out": "./docs/",
-    "name": "blockly-plugin-type-blockjson",
+    "name": "blockly-local-variable",
+    "entryPoints": ["./src"],
     "exclude": [
         "node_modules/**/*",
         "dist/**/*",
+        "lib/**/*",
+        "esm/**/*",
         "docs/**/*"
     ],
     "externalPattern": [
         "node_modules/**/*",
         "dist/**/*",
+        "lib/**/*",
+        "esm/**/*",
         "docs/**/*"
     ],
     "excludeExternals": true,

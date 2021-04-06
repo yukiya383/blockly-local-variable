@@ -6,6 +6,7 @@
  * - Callback for category
  * @module
  */
+
 import Blockly from 'blockly';
 import * as JavaScript from "blockly/javascript";
 import { ArgFieldCheckbox, ArgFieldInput, ArgInputField, BlockJson, BlockWithoutOutputCodeGen, BlockWithOutputCodeGen } from 'blockly-plugin-type-blockjson';
@@ -13,22 +14,54 @@ import {constantCase} from 'constant-case';
 import {noCase} from 'no-case';
 import {pascalCase} from 'pascal-case';
 import {snakeCase} from 'snake-case';
-import { DeclarationList } from './declaration_list';
+import { DeclarationList, Declaration } from './declaration_list';
  
 /**
- * 
+ * An interface to initialize DeclarationList.
+ * Since most initialization processes such as registering blocks, extensions, and category callback
+ * are only necessary in initialization, they are done by Builder.
+ * In most cases, you can use {@link DeclarationListBuilder} which implements this interface.
  */
 export interface IDeclarationListBuilder {
+  /**
+   * Add primitives to {@link DeclarationList}.
+   * @param list List of primitives.
+   */
+  addInitialValues(list:Declaration[]):void;
+  /**
+   * Initialize declaration block.
+   */
   initDeclarationBlock_():void;
+  /**
+   * Initialize getter block.
+   */
   initGetter_():void;
+  /**
+   * Initialize setter block.
+   */
   initSetter_():void;
-  initExtensions_(list:DeclarationList):void;
-  initCategory_(workspace:Blockly.WorkspaceSvg, list:DeclarationList):void;
+  /**
+   * Initialize extensions.
+   */
+  initExtensions_():void;
+  /**
+   * Initialize category callback.
+   * @param workspace Your workspace to which category callback is registerd.
+   */
+  initCategory_(workspace:Blockly.WorkspaceSvg):void;
+  /**
+   * Get initialized declaration list.
+   */
   getResult():DeclarationList;
 }
-  
+
+/**
+ * Implementation of {@link IDeclarationListBuilder}.
+ * Since there's many fields used only for initialization, I recommend using or extending this class.
+ */
 export class DeclarationListBuilder implements IDeclarationListBuilder {
   constructor(public readonly name:string){
+    this.list = new DeclarationList();
     this.TYPE_NAME_DECLARATION_BLOCK_ = pascalCase(name)+"Declaration";
     this.TYPE_NAME_GETTER_ = pascalCase(name)+"Getter";
     this.TYPE_NAME_SETTER_ = pascalCase(name)+"Setter";
@@ -41,10 +74,29 @@ export class DeclarationListBuilder implements IDeclarationListBuilder {
     ];
   }
 
+  /**
+   * List to initialize.
+   */
+  protected list:DeclarationList;
+
+  /**
+   * Category default values.
+   * By default, only declaration block are registered.
+   */
   protected xmlList:Element[];
-  
+
+  /**
+   * Type of variable.
+   */
   protected type:string|null = null;
+  /**
+   * If true, setter block will be registered.
+   */
   protected isAlwaysReadonly:boolean = false;
+  /**
+   * If true, declaration block will have checkbox
+   * which define whether declared variable can be re-assigned.
+   */
   protected hasReadonlyCheckbox:boolean = true;
   
   protected readonly TYPE_NAME_DECLARATION_BLOCK_: string;
@@ -101,6 +153,10 @@ export class DeclarationListBuilder implements IDeclarationListBuilder {
   addCategoryDefaultElements(xmlList:Element[]){
     this.xmlList.push(...xmlList);
     return this;
+  }
+
+  addInitialValues(list:Declaration[]) {
+    this.list.addInitialListValues(list);
   }
 
   initGetter_(){
@@ -234,17 +290,17 @@ export class DeclarationListBuilder implements IDeclarationListBuilder {
     JavaScript[this.TYPE_NAME_DECLARATION_BLOCK_] = declarationBlockCode;
   }
 
-  initExtensions_(list:DeclarationList){
+  initExtensions_(){
     const this_ = this;
     function declarationExtension(this:Blockly.Block){
-      list.declare(this);
+      this_.list.declare(this);
     }
     Blockly.Extensions.unregister(this.EXTENSION_NAME_DECLARATION_);
     Blockly.Extensions.register(this.EXTENSION_NAME_DECLARATION_,declarationExtension);
 
     Blockly.Extensions.unregister(this.EXTENSION_NAME_MENU_);
     function ConstantMenuExtensionImpl(this:Blockly.Block) {
-      const FIELD = this_.stackDropdownMenuImpl_(this, list);
+      const FIELD = this_.stackDropdownMenuImpl_(this);
       if(FIELD){
         this?.getInput('INPUT')
           .appendField(FIELD, 'name');
@@ -253,10 +309,10 @@ export class DeclarationListBuilder implements IDeclarationListBuilder {
     Blockly.Extensions.register(this.EXTENSION_NAME_MENU_,ConstantMenuExtensionImpl);
   }
   
-  stackDropdownMenuImpl_(block:Blockly.Block, list:DeclarationList) {
+  stackDropdownMenuImpl_(block:Blockly.Block) {
     return new Blockly.FieldDropdown(() => {
       let options:Array<[string,string]> = [];
-      const stack = list.listGetter(block);
+      const stack = this.list.getAccessibleDeclarations(block);
       const isSetter:boolean = block.getOutputShape()!==null;
       stack.forEach(({id,wid,name})=>{
         if(id==="" && name){
@@ -276,12 +332,12 @@ export class DeclarationListBuilder implements IDeclarationListBuilder {
   /**
    * カテゴリの中身を再生成
    * ついでに消した定数をスタックから消去
-   * @returns 
+   * @package
    */
-  categoryCallback_ = (list:DeclarationList) => {
+  categoryCallback_ = () => {
     let xmlList = this.xmlList.slice();
     if (Blockly.Blocks[this.TYPE_NAME_GETTER_]) {
-      xmlList.push(...list.getCategoryXML(this.TYPE_NAME_GETTER_));
+      xmlList.push(...this.list.getCategoryXML(this.TYPE_NAME_GETTER_));
       /*const obsolete:number[] = [];
       this.list.forEach(({id, wid, name},i)=>{
         if(id==="" && name){
@@ -301,37 +357,35 @@ export class DeclarationListBuilder implements IDeclarationListBuilder {
       }, this);
       obsolete.forEach((i)=>{this.list.splice(i,1)});*/
       if(!this.isAlwaysReadonly){
-        xmlList.push(...list.getCategoryXML(this.TYPE_NAME_SETTER_,
+        xmlList.push(...this.list.getCategoryXML(this.TYPE_NAME_SETTER_,
             (block)=>block&&block.getFieldValue("readonly")==='FALSE'));
       }
     }
     return xmlList;
   }
   
-  public initCategory_(workspace:Blockly.WorkspaceSvg, list:DeclarationList) {
+  public initCategory_(workspace:Blockly.WorkspaceSvg) {
     workspace.removeToolboxCategoryCallback(this.CATEGORY_NAME_);
-    workspace.registerToolboxCategoryCallback(this.CATEGORY_NAME_,()=>this.categoryCallback_(list));
+    workspace.registerToolboxCategoryCallback(this.CATEGORY_NAME_,this.categoryCallback_);
   };
 
   public getResult():DeclarationList {
-    const list:DeclarationList = new DeclarationList();
-    return list;
+    return this.list;
   }
 }
 
 /**
- * 
+ * Director which construct declaration list using given builder.
  */
-export class DeclarationListDirector {
-  constructor(private builder:IDeclarationListBuilder) {}
+export class DeclarationListDirector<Builder extends IDeclarationListBuilder> {
+  constructor(private builder:Builder) {}
 
   public construct(workspace:Blockly.WorkspaceSvg){
-    const list = this.builder.getResult();
     this.builder.initDeclarationBlock_();
     this.builder.initGetter_();
     this.builder.initSetter_();
-    this.builder.initExtensions_(list);
-    this.builder.initCategory_(workspace, list);
-    return list;
+    this.builder.initExtensions_();
+    this.builder.initCategory_(workspace);
+    return this.builder.getResult();
   }
 }

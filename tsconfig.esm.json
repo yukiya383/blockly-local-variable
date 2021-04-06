@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig",
+  "compilerOptions": {
+    "module": "ESNext",
+    "outDir": "./esm",
+    "target": "ESNext"
+  },
+  "exclude": ["node_modules"],
+  "include": ["src/**/*.ts"]
+}

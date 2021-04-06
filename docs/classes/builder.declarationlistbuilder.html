@@ -1,0 +1,1027 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>DeclarationListBuilder | blockly-local-variable</title>
+	<meta name="description" content="Documentation for blockly-local-variable">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<script async src="../assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">blockly-local-variable</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../modules.html">blockly-local-variable</a>
+				</li>
+				<li>
+					<a href="../modules/builder.html">builder</a>
+				</li>
+				<li>
+					<a href="builder.declarationlistbuilder.html">DeclarationListBuilder</a>
+				</li>
+			</ul>
+			<h1>Class DeclarationListBuilder</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Implementation of <a href="../interfaces/builder.ideclarationlistbuilder.html">IDeclarationListBuilder</a>.
+						Since there&#39;s many fields used only for initialization, I recommend using or extending this class.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">DeclarationListBuilder</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel">
+				<h3>Implements</h3>
+				<ul class="tsd-hierarchy">
+					<li><a href="../interfaces/builder.ideclarationlistbuilder.html" class="tsd-signature-type" data-tsd-kind="Interface">IDeclarationListBuilder</a></li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="builder.declarationlistbuilder.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="builder.declarationlistbuilder.html#category_name_" class="tsd-kind-icon">CATEGORY_<wbr>NAME_</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="builder.declarationlistbuilder.html#colour" class="tsd-kind-icon">COLOUR</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="builder.declarationlistbuilder.html#default_text_declaration" class="tsd-kind-icon">DEFAULT_<wbr>TEXT_<wbr>DECLARATION</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="builder.declarationlistbuilder.html#extension_name_declaration_" class="tsd-kind-icon">EXTENSION_<wbr>NAME_<wbr>DECLARATION_</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="builder.declarationlistbuilder.html#extension_name_menu_" class="tsd-kind-icon">EXTENSION_<wbr>NAME_<wbr>MENU_</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="builder.declarationlistbuilder.html#keyword_const" class="tsd-kind-icon">KEYWORD_<wbr>CONST</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="builder.declarationlistbuilder.html#keyword_variable" class="tsd-kind-icon">KEYWORD_<wbr>VARIABLE</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="builder.declarationlistbuilder.html#message_base" class="tsd-kind-icon">MESSAGE_<wbr>BASE</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="builder.declarationlistbuilder.html#tooltip_declaration" class="tsd-kind-icon">TOOLTIP_<wbr>DECLARATION</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="builder.declarationlistbuilder.html#type_name_declaration_block_" class="tsd-kind-icon">TYPE_<wbr>NAME_<wbr>DECLARATION_<wbr>BLOCK_</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="builder.declarationlistbuilder.html#type_name_getter_" class="tsd-kind-icon">TYPE_<wbr>NAME_<wbr>GETTER_</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="builder.declarationlistbuilder.html#type_name_setter_" class="tsd-kind-icon">TYPE_<wbr>NAME_<wbr>SETTER_</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="builder.declarationlistbuilder.html#hasreadonlycheckbox" class="tsd-kind-icon">has<wbr>Readonly<wbr>Checkbox</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="builder.declarationlistbuilder.html#isalwaysreadonly" class="tsd-kind-icon">is<wbr>Always<wbr>Readonly</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="builder.declarationlistbuilder.html#list" class="tsd-kind-icon">list</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="builder.declarationlistbuilder.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="builder.declarationlistbuilder.html#type" class="tsd-kind-icon">type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="builder.declarationlistbuilder.html#xmllist" class="tsd-kind-icon">xml<wbr>List</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="builder.declarationlistbuilder.html#addcategorydefaultelements" class="tsd-kind-icon">add<wbr>Category<wbr>Default<wbr>Elements</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="builder.declarationlistbuilder.html#addinitialvalues" class="tsd-kind-icon">add<wbr>Initial<wbr>Values</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="builder.declarationlistbuilder.html#categorycallback_" class="tsd-kind-icon">category<wbr>Callback_</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="builder.declarationlistbuilder.html#getresult" class="tsd-kind-icon">get<wbr>Result</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="builder.declarationlistbuilder.html#initcategory_" class="tsd-kind-icon">init<wbr>Category_</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="builder.declarationlistbuilder.html#initdeclarationblock_" class="tsd-kind-icon">init<wbr>Declaration<wbr>Block_</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="builder.declarationlistbuilder.html#initextensions_" class="tsd-kind-icon">init<wbr>Extensions_</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="builder.declarationlistbuilder.html#initgetter_" class="tsd-kind-icon">init<wbr>Getter_</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="builder.declarationlistbuilder.html#initsetter_" class="tsd-kind-icon">init<wbr>Setter_</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="builder.declarationlistbuilder.html#setalwaysreadonly" class="tsd-kind-icon">set<wbr>Always<wbr>Readonly</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="builder.declarationlistbuilder.html#setcolour" class="tsd-kind-icon">set<wbr>Colour</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="builder.declarationlistbuilder.html#setdefaulttextfordeclaration" class="tsd-kind-icon">set<wbr>Default<wbr>Text<wbr>For<wbr>Declaration</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="builder.declarationlistbuilder.html#setkeywordforconstant" class="tsd-kind-icon">set<wbr>Keyword<wbr>For<wbr>Constant</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="builder.declarationlistbuilder.html#setkeywordforvariable" class="tsd-kind-icon">set<wbr>Keyword<wbr>For<wbr>Variable</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="builder.declarationlistbuilder.html#setmessagebase" class="tsd-kind-icon">set<wbr>Message<wbr>Base</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="builder.declarationlistbuilder.html#setreadonlycheckbox" class="tsd-kind-icon">set<wbr>Readonly<wbr>Checkbox</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="builder.declarationlistbuilder.html#settooltipfordeclaration" class="tsd-kind-icon">set<wbr>Tooltip<wbr>For<wbr>Declaration</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="builder.declarationlistbuilder.html#settype" class="tsd-kind-icon">set<wbr>Type</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="builder.declarationlistbuilder.html#stackdropdownmenuimpl_" class="tsd-kind-icon">stack<wbr>Dropdown<wbr>Menu<wbr>Impl_</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Declaration<wbr>List<wbr>Builder<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="builder.declarationlistbuilder.html" class="tsd-signature-type" data-tsd-kind="Class">DeclarationListBuilder</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in builder.ts:62</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="builder.declarationlistbuilder.html" class="tsd-signature-type" data-tsd-kind="Class">DeclarationListBuilder</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="category_name_" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> CATEGORY_<wbr>NAME_</h3>
+					<div class="tsd-signature tsd-kind-icon">CATEGORY_<wbr>NAME_<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in builder.ts:107</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="colour" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> COLOUR</h3>
+					<div class="tsd-signature tsd-kind-icon">COLOUR<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;%{BKY_VARIABLES_HUE}&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in builder.ts:114</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="default_text_declaration" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> DEFAULT_<wbr>TEXT_<wbr>DECLARATION</h3>
+					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>TEXT_<wbr>DECLARATION<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;ITEM&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in builder.ts:110</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="extension_name_declaration_" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> EXTENSION_<wbr>NAME_<wbr>DECLARATION_</h3>
+					<div class="tsd-signature tsd-kind-icon">EXTENSION_<wbr>NAME_<wbr>DECLARATION_<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in builder.ts:105</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="extension_name_menu_" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> EXTENSION_<wbr>NAME_<wbr>MENU_</h3>
+					<div class="tsd-signature tsd-kind-icon">EXTENSION_<wbr>NAME_<wbr>MENU_<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in builder.ts:106</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="keyword_const" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> KEYWORD_<wbr>CONST</h3>
+					<div class="tsd-signature tsd-kind-icon">KEYWORD_<wbr>CONST<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;const&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in builder.ts:112</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="keyword_variable" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> KEYWORD_<wbr>VARIABLE</h3>
+					<div class="tsd-signature tsd-kind-icon">KEYWORD_<wbr>VARIABLE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;let&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in builder.ts:113</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="message_base" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> MESSAGE_<wbr>BASE</h3>
+					<div class="tsd-signature tsd-kind-icon">MESSAGE_<wbr>BASE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;def&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in builder.ts:109</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="tooltip_declaration" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> TOOLTIP_<wbr>DECLARATION</h3>
+					<div class="tsd-signature tsd-kind-icon">TOOLTIP_<wbr>DECLARATION<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in builder.ts:111</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="type_name_declaration_block_" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> TYPE_<wbr>NAME_<wbr>DECLARATION_<wbr>BLOCK_</h3>
+					<div class="tsd-signature tsd-kind-icon">TYPE_<wbr>NAME_<wbr>DECLARATION_<wbr>BLOCK_<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in builder.ts:102</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="type_name_getter_" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> TYPE_<wbr>NAME_<wbr>GETTER_</h3>
+					<div class="tsd-signature tsd-kind-icon">TYPE_<wbr>NAME_<wbr>GETTER_<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in builder.ts:103</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="type_name_setter_" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> TYPE_<wbr>NAME_<wbr>SETTER_</h3>
+					<div class="tsd-signature tsd-kind-icon">TYPE_<wbr>NAME_<wbr>SETTER_<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in builder.ts:104</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="hasreadonlycheckbox" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> has<wbr>Readonly<wbr>Checkbox</h3>
+					<div class="tsd-signature tsd-kind-icon">has<wbr>Readonly<wbr>Checkbox<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in builder.ts:100</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>If true, declaration block will have checkbox
+							which define whether declared variable can be re-assigned.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="isalwaysreadonly" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> is<wbr>Always<wbr>Readonly</h3>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Always<wbr>Readonly<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in builder.ts:95</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>If true, setter block will be registered.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="list" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> list</h3>
+					<div class="tsd-signature tsd-kind-icon">list<span class="tsd-signature-symbol">:</span> <a href="declaration_list.declarationlist.html" class="tsd-signature-type" data-tsd-kind="Class">DeclarationList</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in builder.ts:80</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>List to initialize.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="name" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> name</h3>
+					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="type" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> type</h3>
+					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = null</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in builder.ts:91</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Type of variable.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="xmllist" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> xml<wbr>List</h3>
+					<div class="tsd-signature tsd-kind-icon">xml<wbr>List<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Element</span><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in builder.ts:86</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Category default values.
+							By default, only declaration block are registered.</p>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="addcategorydefaultelements" class="tsd-anchor"></a>
+					<h3>add<wbr>Category<wbr>Default<wbr>Elements</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Category<wbr>Default<wbr>Elements<span class="tsd-signature-symbol">(</span>xmlList<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Element</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="builder.declarationlistbuilder.html" class="tsd-signature-type" data-tsd-kind="Class">DeclarationListBuilder</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in builder.ts:153</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>xmlList: <span class="tsd-signature-type">Element</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="builder.declarationlistbuilder.html" class="tsd-signature-type" data-tsd-kind="Class">DeclarationListBuilder</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="addinitialvalues" class="tsd-anchor"></a>
+					<h3>add<wbr>Initial<wbr>Values</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Initial<wbr>Values<span class="tsd-signature-symbol">(</span>list<span class="tsd-signature-symbol">: </span><a href="../modules/declaration_list.html#declaration" class="tsd-signature-type" data-tsd-kind="Type alias">Declaration</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/builder.ideclarationlistbuilder.html">IDeclarationListBuilder</a>.<a href="../interfaces/builder.ideclarationlistbuilder.html#addinitialvalues">addInitialValues</a></p>
+								<ul>
+									<li>Defined in builder.ts:158</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Add primitives to <a href="declaration_list.declarationlist.html">DeclarationList</a>.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>list: <a href="../modules/declaration_list.html#declaration" class="tsd-signature-type" data-tsd-kind="Type alias">Declaration</a><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="categorycallback_" class="tsd-anchor"></a>
+					<h3>category<wbr>Callback_</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">category<wbr>Callback_<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Element</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in builder.ts:337</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>カテゴリの中身を再生成
+									ついでに消した定数をスタックから消去</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>package</dt>
+									<dd></dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Element</span><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getresult" class="tsd-anchor"></a>
+					<h3>get<wbr>Result</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Result<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="declaration_list.declarationlist.html" class="tsd-signature-type" data-tsd-kind="Class">DeclarationList</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/builder.ideclarationlistbuilder.html">IDeclarationListBuilder</a>.<a href="../interfaces/builder.ideclarationlistbuilder.html#getresult">getResult</a></p>
+								<ul>
+									<li>Defined in builder.ts:372</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get initialized declaration list.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="declaration_list.declarationlist.html" class="tsd-signature-type" data-tsd-kind="Class">DeclarationList</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="initcategory_" class="tsd-anchor"></a>
+					<h3>init<wbr>Category_</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">init<wbr>Category_<span class="tsd-signature-symbol">(</span>workspace<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WorkspaceSvg</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/builder.ideclarationlistbuilder.html">IDeclarationListBuilder</a>.<a href="../interfaces/builder.ideclarationlistbuilder.html#initcategory_">initCategory_</a></p>
+								<ul>
+									<li>Defined in builder.ts:367</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Initialize category callback.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>workspace: <span class="tsd-signature-type">WorkspaceSvg</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="initdeclarationblock_" class="tsd-anchor"></a>
+					<h3>init<wbr>Declaration<wbr>Block_</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">init<wbr>Declaration<wbr>Block_<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/builder.ideclarationlistbuilder.html">IDeclarationListBuilder</a>.<a href="../interfaces/builder.ideclarationlistbuilder.html#initdeclarationblock_">initDeclarationBlock_</a></p>
+								<ul>
+									<li>Defined in builder.ts:221</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Initialize declaration block.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="initextensions_" class="tsd-anchor"></a>
+					<h3>init<wbr>Extensions_</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">init<wbr>Extensions_<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/builder.ideclarationlistbuilder.html">IDeclarationListBuilder</a>.<a href="../interfaces/builder.ideclarationlistbuilder.html#initextensions_">initExtensions_</a></p>
+								<ul>
+									<li>Defined in builder.ts:293</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Initialize extensions.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="initgetter_" class="tsd-anchor"></a>
+					<h3>init<wbr>Getter_</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">init<wbr>Getter_<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/builder.ideclarationlistbuilder.html">IDeclarationListBuilder</a>.<a href="../interfaces/builder.ideclarationlistbuilder.html#initgetter_">initGetter_</a></p>
+								<ul>
+									<li>Defined in builder.ts:162</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Initialize getter block.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="initsetter_" class="tsd-anchor"></a>
+					<h3>init<wbr>Setter_</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">init<wbr>Setter_<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/builder.ideclarationlistbuilder.html">IDeclarationListBuilder</a>.<a href="../interfaces/builder.ideclarationlistbuilder.html#initsetter_">initSetter_</a></p>
+								<ul>
+									<li>Defined in builder.ts:187</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Initialize setter block.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setalwaysreadonly" class="tsd-anchor"></a>
+					<h3>set<wbr>Always<wbr>Readonly</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Always<wbr>Readonly<span class="tsd-signature-symbol">(</span>isAlwaysReadonly<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="builder.declarationlistbuilder.html" class="tsd-signature-type" data-tsd-kind="Class">DeclarationListBuilder</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in builder.ts:120</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>isAlwaysReadonly: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="builder.declarationlistbuilder.html" class="tsd-signature-type" data-tsd-kind="Class">DeclarationListBuilder</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setcolour" class="tsd-anchor"></a>
+					<h3>set<wbr>Colour</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Colour<span class="tsd-signature-symbol">(</span>colour<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="builder.declarationlistbuilder.html" class="tsd-signature-type" data-tsd-kind="Class">DeclarationListBuilder</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in builder.ts:148</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>colour: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="builder.declarationlistbuilder.html" class="tsd-signature-type" data-tsd-kind="Class">DeclarationListBuilder</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setdefaulttextfordeclaration" class="tsd-anchor"></a>
+					<h3>set<wbr>Default<wbr>Text<wbr>For<wbr>Declaration</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Default<wbr>Text<wbr>For<wbr>Declaration<span class="tsd-signature-symbol">(</span>defaultTextForDeclaration<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="builder.declarationlistbuilder.html" class="tsd-signature-type" data-tsd-kind="Class">DeclarationListBuilder</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in builder.ts:132</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>defaultTextForDeclaration: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="builder.declarationlistbuilder.html" class="tsd-signature-type" data-tsd-kind="Class">DeclarationListBuilder</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setkeywordforconstant" class="tsd-anchor"></a>
+					<h3>set<wbr>Keyword<wbr>For<wbr>Constant</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Keyword<wbr>For<wbr>Constant<span class="tsd-signature-symbol">(</span>keywordForConstant<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="builder.declarationlistbuilder.html" class="tsd-signature-type" data-tsd-kind="Class">DeclarationListBuilder</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in builder.ts:140</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>keywordForConstant: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="builder.declarationlistbuilder.html" class="tsd-signature-type" data-tsd-kind="Class">DeclarationListBuilder</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setkeywordforvariable" class="tsd-anchor"></a>
+					<h3>set<wbr>Keyword<wbr>For<wbr>Variable</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Keyword<wbr>For<wbr>Variable<span class="tsd-signature-symbol">(</span>keywordForVariable<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="builder.declarationlistbuilder.html" class="tsd-signature-type" data-tsd-kind="Class">DeclarationListBuilder</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in builder.ts:144</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>keywordForVariable: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="builder.declarationlistbuilder.html" class="tsd-signature-type" data-tsd-kind="Class">DeclarationListBuilder</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setmessagebase" class="tsd-anchor"></a>
+					<h3>set<wbr>Message<wbr>Base</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Message<wbr>Base<span class="tsd-signature-symbol">(</span>messageBase<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="builder.declarationlistbuilder.html" class="tsd-signature-type" data-tsd-kind="Class">DeclarationListBuilder</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in builder.ts:128</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>messageBase: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="builder.declarationlistbuilder.html" class="tsd-signature-type" data-tsd-kind="Class">DeclarationListBuilder</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setreadonlycheckbox" class="tsd-anchor"></a>
+					<h3>set<wbr>Readonly<wbr>Checkbox</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Readonly<wbr>Checkbox<span class="tsd-signature-symbol">(</span>hasReadonlyCheckbox<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="builder.declarationlistbuilder.html" class="tsd-signature-type" data-tsd-kind="Class">DeclarationListBuilder</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in builder.ts:124</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>hasReadonlyCheckbox: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="builder.declarationlistbuilder.html" class="tsd-signature-type" data-tsd-kind="Class">DeclarationListBuilder</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="settooltipfordeclaration" class="tsd-anchor"></a>
+					<h3>set<wbr>Tooltip<wbr>For<wbr>Declaration</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Tooltip<wbr>For<wbr>Declaration<span class="tsd-signature-symbol">(</span>tooltipForDeclaration<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="builder.declarationlistbuilder.html" class="tsd-signature-type" data-tsd-kind="Class">DeclarationListBuilder</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in builder.ts:136</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>tooltipForDeclaration: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="builder.declarationlistbuilder.html" class="tsd-signature-type" data-tsd-kind="Class">DeclarationListBuilder</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="settype" class="tsd-anchor"></a>
+					<h3>set<wbr>Type</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Type<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="builder.declarationlistbuilder.html" class="tsd-signature-type" data-tsd-kind="Class">DeclarationListBuilder</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in builder.ts:116</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>type: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="builder.declarationlistbuilder.html" class="tsd-signature-type" data-tsd-kind="Class">DeclarationListBuilder</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="stackdropdownmenuimpl_" class="tsd-anchor"></a>
+					<h3>stack<wbr>Dropdown<wbr>Menu<wbr>Impl_</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">stack<wbr>Dropdown<wbr>Menu<wbr>Impl_<span class="tsd-signature-symbol">(</span>block<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Block</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">FieldDropdown</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in builder.ts:312</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>block: <span class="tsd-signature-type">Block</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">FieldDropdown</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="../modules.html">Exports</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/blockly_plugin_typed_codegenerator_javascript.html">blockly-<wbr>plugin-<wbr>typed-<wbr>codegenerator/javascript</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/blockly_plugin_typed_codegenerator_python.html">blockly-<wbr>plugin-<wbr>typed-<wbr>codegenerator/python</a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="../modules/builder.html">builder</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/declaration_list.html">declaration_<wbr>list</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/index.html">index</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class tsd-parent-kind-module">
+						<a href="builder.declarationlistbuilder.html" class="tsd-kind-icon">Declaration<wbr>List<wbr>Builder</a>
+						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="builder.declarationlistbuilder.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="builder.declarationlistbuilder.html#category_name_" class="tsd-kind-icon">CATEGORY_<wbr>NAME_</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="builder.declarationlistbuilder.html#colour" class="tsd-kind-icon">COLOUR</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="builder.declarationlistbuilder.html#default_text_declaration" class="tsd-kind-icon">DEFAULT_<wbr>TEXT_<wbr>DECLARATION</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="builder.declarationlistbuilder.html#extension_name_declaration_" class="tsd-kind-icon">EXTENSION_<wbr>NAME_<wbr>DECLARATION_</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="builder.declarationlistbuilder.html#extension_name_menu_" class="tsd-kind-icon">EXTENSION_<wbr>NAME_<wbr>MENU_</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="builder.declarationlistbuilder.html#keyword_const" class="tsd-kind-icon">KEYWORD_<wbr>CONST</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="builder.declarationlistbuilder.html#keyword_variable" class="tsd-kind-icon">KEYWORD_<wbr>VARIABLE</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="builder.declarationlistbuilder.html#message_base" class="tsd-kind-icon">MESSAGE_<wbr>BASE</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="builder.declarationlistbuilder.html#tooltip_declaration" class="tsd-kind-icon">TOOLTIP_<wbr>DECLARATION</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="builder.declarationlistbuilder.html#type_name_declaration_block_" class="tsd-kind-icon">TYPE_<wbr>NAME_<wbr>DECLARATION_<wbr>BLOCK_</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="builder.declarationlistbuilder.html#type_name_getter_" class="tsd-kind-icon">TYPE_<wbr>NAME_<wbr>GETTER_</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="builder.declarationlistbuilder.html#type_name_setter_" class="tsd-kind-icon">TYPE_<wbr>NAME_<wbr>SETTER_</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="builder.declarationlistbuilder.html#hasreadonlycheckbox" class="tsd-kind-icon">has<wbr>Readonly<wbr>Checkbox</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="builder.declarationlistbuilder.html#isalwaysreadonly" class="tsd-kind-icon">is<wbr>Always<wbr>Readonly</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="builder.declarationlistbuilder.html#list" class="tsd-kind-icon">list</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="builder.declarationlistbuilder.html#name" class="tsd-kind-icon">name</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="builder.declarationlistbuilder.html#type" class="tsd-kind-icon">type</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="builder.declarationlistbuilder.html#xmllist" class="tsd-kind-icon">xml<wbr>List</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="builder.declarationlistbuilder.html#addcategorydefaultelements" class="tsd-kind-icon">add<wbr>Category<wbr>Default<wbr>Elements</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="builder.declarationlistbuilder.html#addinitialvalues" class="tsd-kind-icon">add<wbr>Initial<wbr>Values</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="builder.declarationlistbuilder.html#categorycallback_" class="tsd-kind-icon">category<wbr>Callback_</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="builder.declarationlistbuilder.html#getresult" class="tsd-kind-icon">get<wbr>Result</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="builder.declarationlistbuilder.html#initcategory_" class="tsd-kind-icon">init<wbr>Category_</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="builder.declarationlistbuilder.html#initdeclarationblock_" class="tsd-kind-icon">init<wbr>Declaration<wbr>Block_</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="builder.declarationlistbuilder.html#initextensions_" class="tsd-kind-icon">init<wbr>Extensions_</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="builder.declarationlistbuilder.html#initgetter_" class="tsd-kind-icon">init<wbr>Getter_</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="builder.declarationlistbuilder.html#initsetter_" class="tsd-kind-icon">init<wbr>Setter_</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="builder.declarationlistbuilder.html#setalwaysreadonly" class="tsd-kind-icon">set<wbr>Always<wbr>Readonly</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="builder.declarationlistbuilder.html#setcolour" class="tsd-kind-icon">set<wbr>Colour</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="builder.declarationlistbuilder.html#setdefaulttextfordeclaration" class="tsd-kind-icon">set<wbr>Default<wbr>Text<wbr>For<wbr>Declaration</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="builder.declarationlistbuilder.html#setkeywordforconstant" class="tsd-kind-icon">set<wbr>Keyword<wbr>For<wbr>Constant</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="builder.declarationlistbuilder.html#setkeywordforvariable" class="tsd-kind-icon">set<wbr>Keyword<wbr>For<wbr>Variable</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="builder.declarationlistbuilder.html#setmessagebase" class="tsd-kind-icon">set<wbr>Message<wbr>Base</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="builder.declarationlistbuilder.html#setreadonlycheckbox" class="tsd-kind-icon">set<wbr>Readonly<wbr>Checkbox</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="builder.declarationlistbuilder.html#settooltipfordeclaration" class="tsd-kind-icon">set<wbr>Tooltip<wbr>For<wbr>Declaration</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="builder.declarationlistbuilder.html#settype" class="tsd-kind-icon">set<wbr>Type</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="builder.declarationlistbuilder.html#stackdropdownmenuimpl_" class="tsd-kind-icon">stack<wbr>Dropdown<wbr>Menu<wbr>Impl_</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+					<li class=" tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="builder.declarationlistdirector.html" class="tsd-kind-icon">Declaration<wbr>List<wbr>Director</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/builder.ideclarationlistbuilder.html" class="tsd-kind-icon">IDeclaration<wbr>List<wbr>Builder</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer>
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
