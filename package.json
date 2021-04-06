@@ -1,6 +1,6 @@
 {
   "name": "blockly-local-variable",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Add local variable support to Blockly.",
   "author": "yukiya383",
   "license": "Apache-2.0",
