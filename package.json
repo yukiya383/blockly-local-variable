@@ -1,6 +1,6 @@
 {
   "name": "blockly-local-variable",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Add local variable support to Blockly.",
   "author": "yukiya383",
   "license": "Apache-2.0",
@@ -25,7 +25,9 @@
   "module": "esm/index.js",
   "types": "lib/index.d.ts",
   "files": [
-    "lib", "esm", "umd"
+    "lib",
+    "esm",
+    "umd"
   ],
   "peerDependencies": {
     "blockly": "^5.20210325.0"
